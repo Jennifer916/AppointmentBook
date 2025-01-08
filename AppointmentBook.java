@@ -14,9 +14,10 @@ public class AppointmentBook {
             block++;
             if(block==duration) {
                 return i - duration + 1 ;
-            } else {
-                block =0;
             }
+        }
+        else {
+            block =0;
         }
        }
        return -1 ;
@@ -36,8 +37,8 @@ public class AppointmentBook {
         System.out.println(i+ " " +schedule[period-1][i]);
     } 
     private void reserveBlock(int period, int startMinute, int duration) {
-        for (int i= startMinute; i<startMinute +duration;i++) {
-            schedule [period-1][i]=false;
+        for (int i= startMinute; i<startMinute + duration;i++) {
+            schedule [period-1][i] = false;
         }
     }
 
